@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'OpenSansRegular';
+  src: url('../fonts/OpenSans-Regular.ttf');
+}
+
+@import 'variables';
+@import 'reset';
+@import 'main';
+@import 'layout/layout';
+@import 'components/components';
