@@ -7,7 +7,7 @@
     position: relative;
     margin: auto;
     height: 80vh;
-    
+
     img {
       object-fit: cover;
       width: 100%;
@@ -37,33 +37,50 @@
     top: 0;
   }
 
+  // nav
+  &__nav {
+    padding: 12px;
+    margin: 0;
+    display: inline-block;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+
+    span {
+      pointer-events: none;
+      clip-path: inset(50%);
+    }
+  }
+  
+  &__nav:before {
+    content: '';
+    padding: 6px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-color: $white;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+  }
+  
+  &__prev {
+    transform: rotate(130deg);
+    // margin-left: -110px;
+  }
+  
+  &__next {
+    transform: rotate(-45deg);
+    margin-left: 110px;
+    right: 0;
+  }
+
   &__prev,
   &__next {
     cursor: pointer;
     position: absolute;
     top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-  }
-
-  /* Position the "next button" to the right */
-
-  &__next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
-
-  /* On hover, add a black background color with a little bit see-through */
-
-  &__prev:hover,
-  &__next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
   }
 
   /* The dots/bullets/indicators */
