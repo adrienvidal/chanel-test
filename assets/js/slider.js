@@ -5,51 +5,51 @@ class Slider {
     this.navPrev = document.querySelector('.slider__prev')
     this.navNext = document.querySelector('.slider__next')
     this.dots = document.querySelectorAll('.slider__dots--dot')
+    this.slideIndex = 1
   }
 
   init() {
-    let slideIndex = 1
-
-    const plusSlides = (n) => {
-      showSlides((slideIndex += n))
-    }
-
-    const currentSlide = (n) => {
-      showSlides((slideIndex = n))
-    }
-
-    const showSlides = (n) => {
-      let i
-      if (n > this.slides.length) {
-        slideIndex = 1
-      }
-
-      if (n < 1) {
-        slideIndex = this.slides.length
-      }
-      for (i = 0; i < this.slides.length; i++) {
-        this.slides[i].style.display = 'none'
-      }
-
-      this.slides[slideIndex - 1].style.display = 'block'
-    }
-
-    showSlides(slideIndex)
+    this.showSlides(this.slideIndex)
 
     this.slider.addEventListener('click', (e) => {
       if (e.target.classList.contains('slider__next')) {
-        plusSlides(1)
+        this.plusSlides(1)
       }
 
       if (e.target.classList.contains('slider__prev')) {
-        plusSlides(-1)
+        this.plusSlides(-1)
       }
 
       if (e.target.classList.contains('slider__dots--dot')) {
         const index = e.target.getAttribute('data-index')
-        currentSlide(parseInt(index))
+        this.currentSlide(parseInt(index))
       }
     })
+    
+  }
+
+  plusSlides (n) {
+    this.showSlides((this.slideIndex += n))
+  }
+
+  currentSlide (n) {
+    this.showSlides((this.slideIndex = n))
+  }
+
+  showSlides(n) {
+    let i
+    if (n > this.slides.length) {
+      this.slideIndex = 1
+    }
+
+    if (n < 1) {
+      this.slideIndex = this.slides.length
+    }
+    for (i = 0; i < this.slides.length; i++) {
+      this.slides[i].style.display = 'none'
+    }
+
+    this.slides[this.slideIndex - 1].style.display = 'block'
   }
 }
 
