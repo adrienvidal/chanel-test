@@ -1,6 +1,8 @@
 .slider {
   &__container {
-    max-width: 100%;
+    width: 100%;
+    max-width: 80%;
+    margin: 0 auto;
     position: relative;
 
     @media only screen and (max-width: $desktop) {

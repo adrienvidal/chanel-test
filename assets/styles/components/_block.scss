@@ -20,7 +20,7 @@
     width: 100%;
     margin: 0 auto;
 
-    @media only screen and (min-width: $desktop) {
+    @media only screen and (min-width: $tablet) {
       width: 668px;
     }
   }
@@ -33,7 +33,7 @@
     text-align: center;
     margin-top: 100px;
     margin-bottom: 100px;
-    
+
     .block__title-wrapper {
       margin-bottom: 100px;
     }
