@@ -2,6 +2,8 @@
 
 Test réalisé avec https://vitejs.dev/
 
+Deploy: https://chanel-test.netlify.app/
+
 ## Installation
 
 Clone this repo and npm install.
