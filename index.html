@@ -7,25 +7,45 @@
     <title>Vite App</title>
   </head>
   <body>
+    <section class="hero">
+      <h1 class="hero__title">Go to the moon</h1>
+    </section>
     <main>
-      <section class="hero">
-        <h1 class="hero__title">Go to the moon</h1>
-      </section>
-
       <section class="overTheMoon block">
         <div class="block__title-wrapper">
           <h2 class="block__title">Over the moon*</h2>
-          <span class="block__legend">Quatre inconnus se rencontrent dans un ascenseur pour la Lune.</span>
+          <span class="block__legend">
+            Quatre inconnus se rencontrent dans un ascenseur pour la Lune.
+          </span>
         </div>
-        
+
         <div class="block__img-wrapper">
           <picture>
-            <source media="(min-width:769px)" srcset="./assets/images/giedre.jpg">
-            <img class="block__img" src="./assets/images/giedre-mobile.jpg" alt="giedre">
+            <source media="(min-width:769px)" srcset="./assets/images/giedre.jpg" />
+            <img class="block__img" src="./assets/images/giedre-mobile.jpg" alt="giedre" />
           </picture>
         </div>
       </section>
 
+      <section class="shop block">
+        <div class="block__img-wrapper">
+          <picture>
+            <source media="(min-width:769px)" srcset="./assets/images/imari.jpg" />
+            <img class="block__img" src="./assets/images/imari-mobile.jpg" alt="giedre" />
+          </picture>
+        </div>
+        <div class="block__title-wrapper">
+          <h2 class="block__title">Découvrir les pièces en boutique</h2>
+          <span class="block__legend">
+            Découvrez les nouvelles pièces dans votre boutique CHANEL.
+          </span>
+        </div>
+        <button type="button" class="cta">Trouvez votre boutique</button>
+      </section>
+
+      <section class="legend">
+        <span class="legend__text">*Destination lune</span>
+      </section>
     </main>
 
     <script type="module" src="/main.js"></script>

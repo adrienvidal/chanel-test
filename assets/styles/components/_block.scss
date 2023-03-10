@@ -7,6 +7,7 @@
   }
   
   &__legend {
+    display: block;
     font-family: $openSans;
     font-size: 14px;
     font-weight: 300;
@@ -32,6 +33,23 @@
 
     .block__title-wrapper {
       margin-bottom: 100px;
+    }
+  }
+  
+  &.shop {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 150px;
+
+    .block__title {
+      font-size: 30px;
+    }
+
+    .block__img-wrapper {
+      margin-bottom: 100px;
+    }
+    .block__title-wrapper {
+      margin-bottom: 20px;
     }
   }
 }
