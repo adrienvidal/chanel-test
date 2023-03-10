@@ -33,7 +33,7 @@
     text-align: center;
     margin-top: 100px;
     margin-bottom: 100px;
-
+    
     .block__title-wrapper {
       margin-bottom: 100px;
     }
@@ -59,6 +59,11 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-bottom: 20px;
+
+        @media only screen and (min-width: $desktop) {
+          margin-bottom: 0;
+        }
       }
     }
   }
