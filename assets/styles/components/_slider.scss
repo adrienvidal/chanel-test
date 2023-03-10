@@ -1,12 +1,12 @@
 .slider {
   &__container {
-    width: 100%;
-    max-width: 80%;
+    width: 80%;
     margin: 0 auto;
     position: relative;
 
     @media only screen and (max-width: $desktop) {
       overflow: hidden;
+      width: 100%;
     }
 
     img {
