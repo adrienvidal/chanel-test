@@ -19,6 +19,7 @@
   &__img-wrapper {
     width: 100%;
     margin: 0 auto;
+    overflow: hidden;
 
     @media only screen and (min-width: $tablet) {
       width: 668px;
