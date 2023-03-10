@@ -4,6 +4,7 @@
     font-weight: 600;
     color: $pink;
     margin-bottom: 10px;
+    line-height: 36px;
   }
   
   &__legend {
@@ -11,6 +12,7 @@
     font-family: $openSans;
     font-size: 14px;
     font-weight: 300;
+    line-height: 18px;
     color: $grey;
   }
 
@@ -44,12 +46,31 @@
     .block__title {
       font-size: 30px;
     }
-
+    
     .block__img-wrapper {
       margin-bottom: 100px;
     }
     .block__title-wrapper {
       margin-bottom: 20px;
+    }
+  }
+  
+  &.pinkBlossom {
+    .block__title {
+      font-size: 30px;
+    }
+    
+    .block__slider {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      text-align: center;
+
+      &--left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
     }
   }
 }
