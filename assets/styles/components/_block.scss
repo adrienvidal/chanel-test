@@ -1,0 +1,37 @@
+.block {
+  &__title {
+    font-size: 40px;
+    font-weight: 600;
+    color: $pink;
+    margin-bottom: 10px;
+  }
+  
+  &__legend {
+    font-family: $openSans;
+    font-size: 14px;
+    font-weight: 300;
+    color: $grey;
+  }
+
+  &__img-wrapper {
+    width: 100%;
+    margin: 0 auto;
+
+    @media only screen and (min-width: $desktop) {
+      width: 668px;
+    }
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &.overTheMoon {
+    text-align: center;
+    margin-top: 100px;
+
+    .block__title-wrapper {
+      margin-bottom: 100px;
+    }
+  }
+}
