@@ -2,8 +2,11 @@
   &__container {
     max-width: 100%;
     position: relative;
-    margin-bottom: 20px;
     height: 80vh;
+
+    @media only screen and (max-width: $desktop) {
+      overflow: hidden;
+    }
 
     img {
       object-fit: cover;
@@ -60,6 +63,8 @@
   // dots
   &__dots {
     text-align: center;
+    margin-top: 20px;
+
     &--dot {
       cursor: pointer;
       margin: 0 2px;
