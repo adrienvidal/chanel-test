@@ -36,11 +36,8 @@ class App {
       for (i = 0; i < this.slides.length; i++) {
         this.slides[i].style.display = 'none'
       }
-      for (i = 0; i < this.dots.length; i++) {
-        this.dots[i].className = this.dots[i].className.replace(' active', '')
-      }
+
       this.slides[slideIndex - 1].style.display = 'block'
-      this.dots[slideIndex - 1].className += ' active'
     }
 
     showSlides(slideIndex)
