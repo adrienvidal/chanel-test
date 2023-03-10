@@ -6,6 +6,8 @@ class Slider {
     this.navNext = document.querySelector('.slider__next')
     this.dots = document.querySelectorAll('.slider__dots--dot')
     this.slideIndex = 1
+    this.isAuto = false
+    this.timer = 10000
   }
 
   init() {
@@ -25,19 +27,20 @@ class Slider {
         this.currentSlide(parseInt(index))
       }
     })
-    
   }
 
-  plusSlides (n) {
+  plusSlides(n) {
     this.showSlides((this.slideIndex += n))
   }
 
-  currentSlide (n) {
+  currentSlide(n) {
     this.showSlides((this.slideIndex = n))
   }
 
   showSlides(n) {
     let i
+    this.slideIndex = n
+    
     if (n > this.slides.length) {
       this.slideIndex = 1
     }
@@ -50,6 +53,17 @@ class Slider {
     }
 
     this.slides[this.slideIndex - 1].style.display = 'block'
+
+    if(!this.isAuto) {
+      this.isAuto = true
+      this.autoNav()
+    }
+  }
+
+  autoNav() {
+    setInterval(() => {
+      this.showSlides(this.slideIndex + 1)
+    }, this.timer)
   }
 }
 
