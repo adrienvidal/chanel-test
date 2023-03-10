@@ -32,15 +32,39 @@
   &.overTheMoon {
     text-align: center;
     margin-top: 100px;
+    margin-bottom: 100px;
 
     .block__title-wrapper {
       margin-bottom: 100px;
     }
   }
+
+  &.pinkBlossom {
+    margin-bottom: 100px;
+    
+    .block__title {
+      font-size: 30px;
+    }
+
+    .block__slider {
+      text-align: center;
+      
+      @media only screen and (min-width: $desktop) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      &--left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
   
   &.shop {
     text-align: center;
-    margin-top: 100px;
     margin-bottom: 150px;
 
     .block__title {
@@ -55,22 +79,4 @@
     }
   }
   
-  &.pinkBlossom {
-    .block__title {
-      font-size: 30px;
-    }
-    
-    .block__slider {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      text-align: center;
-
-      &--left {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-    }
-  }
 }
