@@ -1,18 +1,7 @@
 html {
   font-size: $font-size;
-  font-family: $openSansRegular;
-  background: $white;
-  color: $black;
+  font-family: $abchanelCorpo;
+  background: $black;
+  color: $white;
 }
 
-body {
-  position: relative;
-}
-
-.clear-float {
-  clear: both;
-}
-
-strong {
-  font-weight: bold;
-}
