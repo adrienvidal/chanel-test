@@ -4,7 +4,8 @@ class Slider {
     this.slides = document.querySelectorAll('.slider__slide')
     this.navPrev = document.querySelector('.slider__prev')
     this.navNext = document.querySelector('.slider__next')
-    this.dots = document.querySelectorAll('.slider__dots--dot')
+    this.slideCurrent = document.querySelector('#slide-current')
+    this.slideAll = document.querySelector('#slide-all')
     this.slideIndex = 1
     this.isAuto = false
     this.timer = 10000
@@ -12,6 +13,9 @@ class Slider {
 
   init() {
     this.showSlides(this.slideIndex)
+
+    // push slides length in dots all
+    this.slideAll.innerHTML = this.slides.length
 
     this.slider.addEventListener('click', (e) => {
       if (e.target.classList.contains('slider__next')) {
@@ -22,10 +26,6 @@ class Slider {
         this.plusSlides(-1)
       }
 
-      if (e.target.classList.contains('slider__dots--dot')) {
-        const index = e.target.getAttribute('data-index')
-        this.currentSlide(parseInt(index))
-      }
     })
   }
 
@@ -52,8 +52,13 @@ class Slider {
       this.slides[i].style.display = 'none'
     }
 
+    // update dots
+    this.slideCurrent.innerHTML = this.slideIndex
+
+    // hide slides
     this.slides[this.slideIndex - 1].style.display = 'block'
 
+    // init autonav
     if(!this.isAuto) {
       this.isAuto = true
       this.autoNav()
