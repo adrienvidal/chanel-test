@@ -1,7 +1,7 @@
 .hero {
   position: relative;
   width: 100%;
-  height: 796px;
+  height: 400px;
   max-height: 100vh;
   background-image: url('../images/hero.jpg');
   background-size: cover;
@@ -9,21 +9,25 @@
   background-position: center;
   margin-bottom: 20px;
 
+  @media only screen and (min-width: $tablet) {
+    height: 796px;
+  }
+
   &__title {
     position: absolute;
     bottom: 0;
     left: 0;
+    margin-bottom: -72px;
     font-size: 20px;
     text-align: center;
     font-weight: 600;
-    background-color: $black;
+    // background-color: $black;
     width: 100%;
     padding: 20px 0;
 
     @media only screen and (min-width: $tablet) {
       font-size: 30px;
       margin-bottom: 72px;
-      background-color: transparent;
     }
   }
 }
